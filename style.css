@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Mulish', sans-serif;
+
+  --color-base-white: #ffffff;
+  --color-base-gray-10: #F4FCFF;
+  --color-base-gray-100: #202024;
+  --color-base-gray-200: #121214;
+  --color-base-gray-300: #065E7C;
+}
+
+body {
+  background: #FFF;;
+  font-size: 1.6rem;
+}
+
+
+#app {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  height: 100vh;
+}
+
+.container {
+  padding: 1.2rem 2.8rem;
+  width: min(112rem, 100%);
+  margin: 0 auto;
+}
+
+main {
+  overflow-y: scroll;
+}
+
+header {
+  background: var(--color-base-gray-300);
+  display: flex;
+  
+  align-items: center;
+}
+
+header, nav {
+  gap: 2.5rem;
+  font-weight: 600;
+  
+}
+
+header form {
+  flex: 1;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input{
+  width: 100%;
+  padding: 1.2rem;
+    
+
+  border: 0;
+  border-radius: .4rem;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  background: rgba(255, 255, 255, 0.20);
+
+}
+
+.input-wrapper input::placeholder {
+  opacity: 0.56;
+  color: var(--color-base-white);
+}
+
+.logo {
+  width: 4.0rem;
+  height: 4.0rem;
+
+  border-radius: 50%;
+  padding: .8rem;
+
+  background: var(--color-base-gray-10);
+}
+
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+main h1, h2, p {
+  margin-left: 2.2rem;
+}
+
+main h1 {
+  color: var(--color-base-gray-100);
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-top: 31px;
+}
+main p {
+  color: var(--color-base-gray-200);
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 79px;
+}
+
+main h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+ }
+
+.list h1 {
+ margin-bottom: 3.2rem;
+}
+ 
+.details p {
+  display: flex;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.item {
+  display: flex;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.gallery :nth-child(1) {
+  margin-left: 1rem;
+}
+
+.footer, .container {
+  text-align: center;
+  background: var(--color-base-gray-300);
+  color: var(--color-base-gray-10);
+  font-weight: 600;
+}
+
+@media (min-width:1024px) {
+
+  
+  .container {
+    min-width: 100vw;
+  }
+
+
+  .recipe img {
+     flex-direction: column;
+     margin-left: 10.8rem;
+  } 
+
+  main {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);  
+    margin-top: 4.4rem;
+    margin-bottom: 3.9rem;
+  }
+
+  .recipe h1, p {
+    margin-left: 11.2rem;
+    font-weight: 400;
+    width: 80.0rem;
+  }
+
+  .list {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.2rem;
+    margin-top: -3.5rem;
+  }
+}
+
+ 
+
